@@ -45,3 +45,56 @@ function myMap() {
     };
     var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 }
+
+$(document).ready(function() {
+    var spans = $('.text-animation span');
+    var index = 0;
+    var isFadingOut = false;
+
+    function animateText() {
+        if (!isFadingOut) {
+            if (index < spans.length) {
+                spans.eq(index).addClass('active');
+                index++;
+                setTimeout(animateText, 500); // Mengatur waktu munculnya teks
+            } else {
+                isFadingOut = true;
+                setTimeout(fadeOutText, 1000); // Jeda sebelum teks mulai menghilang
+            }
+        }
+    }
+
+    function fadeOutText() {
+        spans.removeClass('active');
+        setTimeout(resetAnimation, 500); // Jeda sebelum animasi diulang
+    }
+
+    function resetAnimation() {
+        index = 0;
+        isFadingOut = false;
+        setTimeout(animateText, 1000); // Jeda sebelum animasi diulang
+    }
+
+    animateText();
+});
+$(document).ready(function () {
+    $('a').on('click', function (e) {
+        e.preventDefault();
+
+        // Tampilkan overlay loading
+        $('#loading-overlay').addClass('active');
+
+        // Ambil URL dari tautan yang diklik
+        var href = $(this).attr('href');
+
+        // Tunggu sebentar untuk memberikan efek loading
+        setTimeout(function () {
+            // Pindahkan halaman ke URL yang baru
+            window.location.href = href;
+        }, 1000); // Anda bisa menyesuaikan waktu loading sesuai kebutuhan
+    });
+});
+
+
+
+
