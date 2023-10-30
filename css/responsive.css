@@ -50,6 +50,17 @@
     padding: 0;
     margin: 0;
   }
+  .boxs-img img {
+    height: 200px;
+
+  }
+  .boxs h1{
+    font-size: 25px;
+  }
+  .dropdown-toggle{
+    color: black !important;
+  }
+  
 
 }
 

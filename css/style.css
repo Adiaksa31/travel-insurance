@@ -5,17 +5,42 @@ body {
   background-color: #ffffff;
   overflow-x: hidden;
 }
-
-
-/* Style untuk gambar dengan efek masking */
-
-
-.image-mask img {
-  width: auto;
-  height: 300px;
-
-
+.icon i{
+  color: #40a798;
 }
+.bg-gradient-primary-to-secondary {
+  background: #40a798;
+  background: linear-gradient(635deg, #40a798 0%, #476269 100%);
+}
+
+.text-gradient {
+  background: -webkit-linear-gradient(215deg, #40a798 0%, #476269 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.rounded-4 {
+  border-radius: 1rem !important;
+}
+
+.profile {
+  position: relative;
+  height: 350px;
+  width: 350px;
+  border-radius: 100px 100px 0 0;
+  margin-top: 10px;
+  max-height: 40rem;
+  max-width: 40rem;
+}
+.profile .profile-img {
+  height: 430px;
+  max-height: 45rem;
+  position: absolute;
+  bottom: 0;
+  left: 185px;
+  transform: translateX(-50%);
+}
+
 
 
 .text-animation span {
@@ -387,7 +412,7 @@ a:focus {
   padding: 20px 20px 20px 20px;
   text-align: center;
   height: 160px; 
-  width: 350px;
+  width: 100%;
 }
 .aksi:hover{
   background: rgba(64, 167, 152, 0.6);
@@ -1125,3 +1150,84 @@ a:focus {
   color: inherit;
 }
 /*# sourceMappingURL=style.css.map */
+
+.line {
+  width: 100%;
+  border-bottom: 5px solid #ccc;
+  margin: 15px 0;
+}
+.line2 {
+  width: 100px;
+  border-bottom: 5px solid #40a798;
+  margin-top: -20px;
+}
+.boxs-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.boxs-img img {
+  height: 500px;
+  transition: transform 0.3s ease-in-out;
+}
+.boxs h1{
+  font-weight: bold;
+}
+.boxs-img:hover img {
+  transform: scale(1.1);
+}
+.accordion {
+  width: 100%;
+}
+
+.accordion-item {
+ background-color: #40a798;
+ color: white;
+ padding: 10px;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #40a798;
+
+  padding: 10px;
+  cursor: pointer;
+}
+
+.accordion-content {
+  display: none;
+  padding: 10px;
+}
+
+
+.accordion-item.active .accordion-content {
+  display: block;
+}
+
+.accordion-icon i {
+  transition: transform 0.3s ease-in-out;
+}
+
+.accordion-item.active .accordion-icon i {
+  transform: rotate(180deg);
+}
+.kategori {
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+.kategori.active {
+  color: #40a798;
+}
+.kategori:hover {
+  color: #40a798;
+}
+
+
+.daftar {
+  display: none;
+}

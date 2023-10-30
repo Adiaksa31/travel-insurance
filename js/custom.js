@@ -94,6 +94,35 @@ $(document).ready(function () {
         }, 1000); // Anda bisa menyesuaikan waktu loading sesuai kebutuhan
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const accordionItems = document.querySelectorAll('.accordion-item');
+    
+    accordionItems.forEach(function(item) {
+      item.addEventListener('click', function() {
+        item.classList.toggle('active');
+      });
+    });
+  });
+  var tampilanSaatIni = null;
+
+  function tampilkanDaftar(id) {
+    var daftar = document.getElementById(id);
+    
+    if (tampilanSaatIni) {
+      tampilanSaatIni.style.display = 'none';
+      tampilanSaatIni.classList.remove('active');
+    }
+    
+    daftar.style.display = 'block';
+    tampilanSaatIni = daftar;
+    tampilanSaatIni.classList.add('active');
+  }
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    tampilkanDaftar('Insured');
+  });
+  
+  
 
 
 
