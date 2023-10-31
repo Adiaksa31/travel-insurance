@@ -1,6 +1,20 @@
 @media (max-width: 1300px) {}
 
-@media (max-width: 1120px) {}
+@media (max-width: 1120px) {
+  .header_section .header_bottom {
+    background: linear-gradient(120deg, #ffffff 275px, #40a798 275px);
+    padding: 15px 0;
+  }
+  .custom-card1 {
+     
+    height: 280px; 
+    
+  }
+  .boxs-img img {
+    height: 300px;
+
+  }
+}
 
 @media (max-width: 992px) {
   .hero_area {
@@ -25,6 +39,22 @@
   .about_section .img-box::before {
     width: calc(100% - 45px);
     height: calc(100% - 45px);
+  }
+  .profile {
+
+    height: 280px;
+    width: 280px;
+   
+   
+  }
+  .profile .profile-img {
+    height: 345px;
+    
+    left: 150px;
+    
+  }
+  .blg img{
+    height: 100px;
   }
 }
 
@@ -60,6 +90,7 @@
   .dropdown-toggle{
     color: black !important;
   }
+  
   
 
 }
