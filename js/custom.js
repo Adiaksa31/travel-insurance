@@ -122,6 +122,29 @@ document.addEventListener('DOMContentLoaded', function() {
     tampilkanDaftar('Insured');
   });
   
+  let currentIndex = 0;
+  const slides = document.querySelector('.slides');
+  const slideItems = document.querySelectorAll('.slide');
+  const slideWidth = slideItems[0].offsetWidth;
+
+  function showSlide(index) {
+    if (index < 0) {
+      index = slideItems.length - 1;
+    } else if (index >= slideItems.length) {
+      index = 0;
+    }
+    const offset = -index * slideWidth;
+    slides.style.transform = `translateX(${offset}px)`;
+    currentIndex = index;
+  }
+
+  // Show the first slide initially
+  showSlide(currentIndex);
+
+  // Set an interval to auto-advance the slides
+  setInterval(() => {
+    showSlide(currentIndex + 1);
+  }, 3000);
   
 
 

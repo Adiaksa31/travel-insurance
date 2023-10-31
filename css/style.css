@@ -1245,3 +1245,20 @@ a:focus {
 .daftar {
   display: none;
 }
+.slider {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+  padding: 10px;
+}
